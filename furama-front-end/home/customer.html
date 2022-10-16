@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <!--    header-->
+    <script src="jquery/jquery-3.5.1.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(function () {
+            $("#includedContent1").load("header.html");
+            $("#includedContent2").load("footer.html");
+
+        });
+    </script>
+
+    <style>
+        .text-name{
+
+            font-size: 50px;
+            margin-left: 40%;
+            padding-top: 40px;
+            color: greenyellow;
+        }
+        th{
+            font-family: Tahoma;
+            font-size: 20px;
+        }
+        td{
+            font-size: 15px;
+            color: seagreen;
+
+        }
+        table{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+</head>
+<body style="background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5))">
+
+<!--Header-->
+<div id="includedContent1"></div>
+<!--    ....-->
+
+<!--==================== PAGE-COVER =================-->
+<div class="container-fluid">
+
+    <h3 class="text-name">CUSTOMER</h3>
+<table class="table table-danger table-striped" id="customerTable" >
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Id Card</th>
+        <th>BirthDay</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Type</th>
+        <th>Update</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+
+    <tr>
+        <td>William Bùi</td>
+        <td>1233343233</td>
+        <td>Platinium</td>
+        <td>2000-12-24</td>
+        <td>Male</td>
+        <td>Đà Nẵng</td>
+        <td>hungb@gmail.com</td>
+        <td>Platinium</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+    </tr>
+    </tbody>
+
+</table>
+</div>
+
+<div id="includedContent2"></div>
+
+
+<script src="datatables/js/jquery.dataTables.min.js"></script>
+<script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#customerTable').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 5
+        });
+    });
+</script>
+</body>
+
+</html>

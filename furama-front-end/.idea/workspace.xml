@@ -24,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2G3s9jcOihUrkcvPBqRtzgojfHY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -41,6 +41,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0522G1_BuiHung_Module5\furama-front-end\home" />
+      <recent name="D:\C0522G1_BuiHung_Module5\furama-front-end" />
       <recent name="D:\module5-angular\furama-front-end\home" />
       <recent name="D:\module5-angular\furama-front-end\home\picture" />
     </key>
@@ -59,6 +61,10 @@
       <workItem from="1665630181439" duration="15642000" />
       <workItem from="1665655279063" duration="830000" />
       <workItem from="1665663561528" duration="2136000" />
+      <workItem from="1665709322814" duration="225000" />
+      <workItem from="1665709683743" duration="12034000" />
+      <workItem from="1665838771950" duration="16670000" />
+      <workItem from="1665924473637" duration="1378000" />
     </task>
     <servers />
   </component>
@@ -76,5 +82,23 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="464" y="228" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1665855782318">
+      <screen x="0" y="0" width="1440" height="852" />
+    </state>
+    <state x="464" y="228" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.852@0.0.1440.852" timestamp="1665855782318" />
+    <state x="451" y="173" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1665732983923">
+      <screen x="0" y="0" width="1440" height="852" />
+    </state>
+    <state x="451" y="173" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.852@0.0.1440.852" timestamp="1665732983923" />
+    <state x="501" y="181" key="FileChooserDialogImpl" timestamp="1665842805434">
+      <screen x="0" y="0" width="1440" height="852" />
+    </state>
+    <state x="501" y="181" key="FileChooserDialogImpl/0.0.1440.852@0.0.1440.852" timestamp="1665842805434" />
+    <state x="650" y="35" width="579" height="783" key="find.popup" timestamp="1665839996576">
+      <screen x="0" y="0" width="1440" height="852" />
+    </state>
+    <state x="650" y="35" width="579" height="783" key="find.popup/0.0.1440.852@0.0.1440.852" timestamp="1665839996576" />
   </component>
 </project>

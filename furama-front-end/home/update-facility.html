@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service</title>
+    <script src="jquery/jquery-3.5.1.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(function () {
+            $("#includedContent1").load("header.html");
+            $("#includedContent2").load("footer.html");
+
+        });
+    </script>
+    <style>
+        .text-name{
+
+            font-size: 45px;
+            margin-left: 25%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            color: greenyellow;
+        }
+        table{
+            margin: auto;
+            width: 80%;
+        }
+        .form-group-lg{
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(rgba(0, 0, 255, 1), rgba(255, 255, 0, 0))">
+<!--Header-->
+<div id="includedContent1"></div>
+<!--.....-->
+
+<!--body-->
+<div class="container-fluid" style="width: 50% ">
+
+    <div class="side-bar-block booking-form-block">
+        <div class="booking-form">
+            <h3 class="text-name"><b>Update Service</b></h3>
+            <form>
+                <div class="form-group-lg">
+                    <input type="text" class="form-control" placeholder="Service Name" required/>
+                </div>
+
+                <div class="form-group-lg m-3">
+                    <input type="number" class="form-control" placeholder="Area" required/>
+                </div>
+
+                <div class="form-group-lg m-3">
+                    <input type="number" class="form-control" placeholder="Cost" required/>
+                </div>
+
+                <div class="form-group-lg m-3">
+                    <input type="number" class="form-control" placeholder="Max People" required/>
+                </div>
+
+                <div class="form-group-lg m-3">
+                    <input type="number" class="form-control" placeholder="Floors" required/>
+                </div>
+                <div class="form-group-lg m-3">
+                    <input type="text" class="form-control" placeholder="Standard Room" required/>
+                </div>
+
+                <div class="form-group-lg m-3">
+                    <input type="text" class="form-control" placeholder="Description Other" required/>
+                </div>
+
+                <div class="form-group-lg m-3">
+                    <select class="form-control">
+                        <option selected>Service Type</option>
+                        <option>Villa</option>
+                        <option>House</option>
+                        <option>Room</option>
+                    </select>
+                </div>
+
+                <div class="form-group-lg m-3">
+                    <select class="form-control">
+                        <option selected>Rent Type</option>
+                        <option>Hour</option>
+                        <option>Day</option>
+                        <option>Month</option>
+                        <option>Year</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-info" style="margin-left:40% ;margin-bottom: 20px;height: 40px;width: 100px">Update</button>
+            </form>
+
+        </div><!-- end booking-form -->
+    </div><!-- end side-bar-block -->
+
+</div>
+
+
+<!--Footer-->
+<div id="includedContent2"></div>
+<!--.....-->
+</body>
+</html>

@@ -63,7 +63,7 @@ p{
 }
 
 .page-heading h2{
-	color:#231f20;
+	color:black;
 }
 
 .page-heading.white-heading h2{
@@ -72,7 +72,7 @@ p{
 
 
 .page-heading .heading-line{
-	border-color:#faa61a;
+	border-color:#1930E0;
 	border-width:medium;
 }
 
@@ -100,7 +100,7 @@ p{
 
 .btn-orange,
 .btn-orange:focus{
-	background:#faa61a;
+	background:#405BC7;
 	color:white;
 }
 
@@ -111,7 +111,7 @@ p{
 
 .btn-black,
 .btn-black:focus{
-	background:#000;
+	background:#1930E0;
 	color:white;
 }
 
@@ -179,7 +179,7 @@ p{
 .owl-carousel.owl-custom-arrow .owl-controls .owl-buttons .owl-prev,
 .owl-carousel.owl-custom-arrow .owl-controls .owl-buttons .owl-next{
 	border-radius:0px;
-	background:#faa61a;
+	background:#6F8EDE;
 }
 
 .map iframe{
@@ -198,7 +198,7 @@ p{
    ----------------------------------------------------- */
 
 #top-bar{
-	background-color:#FFC347;
+	background-color:#5798D4;
 }
 
 #top-bar .form-group select{
@@ -447,15 +447,15 @@ p{
 /************ NAVBAR-COLORED *************/
 
 .navbar-colored{
-	background:#faa61a;
+	background:#5B7DDE;
 }
 
 .main-navbar.navbar-colored .navbar-header .navbar-brand {
-  color:white;
+  color:greenyellow;
 }
 
 .main-navbar.navbar-colored .navbar-header .navbar-brand span{
-  color:#000;
+  color:yellow;
 }
 
 .main-navbar.navbar-colored .nav > li > a{
@@ -1548,7 +1548,7 @@ p{
 /*************** TOUR-PACKAGES *************/
 
 #tour-packages{
-	background:#ededed;
+	background:white;
 }
 
 .tour-package:hover{
@@ -1557,16 +1557,16 @@ p{
 }
 
 .tour-package.best-package .t-pkg-heading{
-	background:#bb7a0f;
+	background:#4278D6;
 }
 
 .tour-package .t-pkg-heading{
-	background:#faa61a;
+	background:#405BC7;
 	color:white;
 }
 
 .tour-package .btn{
-	background:#313131;
+	background:#1930E0;
 	color:white;
 }
 
@@ -1675,7 +1675,7 @@ p{
    ----------------------------------------------------- */
 
 .ftr-top-grey{
-	background:#231f20;
+	background:#405BC7;
 }
 
 .ftr-top-black{
@@ -1691,7 +1691,7 @@ p{
 }
 
 #footer.ftr-heading-w .footer-heading{
-	color:white;
+	color:greenyellow;
 }
 
 #footer-top.ftr-text-white,
@@ -1703,11 +1703,11 @@ p{
 #footer-top.ftr-text-grey,
 #footer-top.ftr-text-grey p,
 #footer-top.ftr-text-grey ul li{
-	color:#828282;
+	color:white;
 }
 
 .footer-widget.ftr-about .social-links li .fa{
-	color:#939598;
+	color:whitesmoke;
 }
 
 .footer-widget.ftr-about .social-links li .fa:hover{

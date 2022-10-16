@@ -137,8 +137,8 @@ h1,h2,h3,h4,h5,h6,.main-title a, .flight-info h3 .flight-destination,.blog-post-
 }
 
 .banner-padding{
-	padding-top:86px;
-	padding-bottom:86px;
+	padding-top:30px;
+	padding-bottom:30px;
 }
 
 .innerpage-section-padding{
@@ -347,7 +347,7 @@ h1,h2,h3,h4,h5,h6,.main-title a, .flight-info h3 .flight-destination,.blog-post-
    ----------------------------------------------------- */
 
 .navbar{
-	margin-bottom:0px;
+
 	z-index:200;
 }
 

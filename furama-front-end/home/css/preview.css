@@ -278,7 +278,7 @@ p{
 }
 
 #footer{
-	background:linear-gradient(rgba(250, 166, 26,0.9), rgba(250, 166, 26,0.9)), url('../preview-images/pattern.jpg')center center;
+	background:linear-gradient(rgba(250, 166, 26,0.9), rgba(250, 166, 26,0.9)), url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vivotek.vn%2Fcong-trinh-tieu-bieu%2Ffurama-resort-da-nang%2F&psig=AOvVaw3wEGlV3m1eYbYhx09KeCBS&ust=1665931260971000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCJj4u9q74voCFQAAAAAdAAAAABAE") center center;
 	background-size:cover;
 	position:relative;
 	overflow:hidden;
