@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 10px;
+  z-index: 300;
+  border: none;
+  outline: none;
+  background-color: green;
+  /*border: 2px solid #ccc;*/
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  opacity: 0.7;
+  width: 50px;
+  height: 100px;
+}
+
+#myBtn:hover {
+  background-color: #33CCFF;
+}

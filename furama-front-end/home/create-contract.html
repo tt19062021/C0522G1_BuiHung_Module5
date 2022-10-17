@@ -12,6 +12,24 @@
 
         });
     </script>
+
+    <style>
+        .text-name{
+
+            font-size: 45px;
+            margin-left: 25%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            color: greenyellow;
+        }
+        table{
+            margin: auto;
+            width: 80%;
+        }
+        .form-group-lg{
+            padding-bottom: 10px;
+        }
+    </style>
 </head>
 <body style="background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5))">
 <!--Header-->
@@ -23,26 +41,26 @@
 
     <div class="side-bar-block booking-form-block">
         <div class="booking-form" >
-            <h3 style="padding-left: 25% ;margin-top: 50px;font-size: 40px"><b>Create Contract</b></h3>
+            <h3 class="text-name"><b>Create Contract</b></h3>
             <form>
-                <div class="form-group m-3">
+                <div class="form-group-lg">
                     <input type="text" class="form-control" placeholder="Name Contract" required/>
                 </div>
 
-                <div class="form-group m-3">
+                <div class="form-group-lg">
                     <input type="date" class="form-control" placeholder="Start Day" required/>
                 </div>
 
-                <div class="form-group m-3">
+                <div class="form-group-lg">
                     <input type="date" class="form-control" placeholder="End Day" required/>
                 </div>
 
-                <div class="form-group m-3">
+                <div class="form-group-lg">
                     <input type="number" class="form-control" placeholder="Depostit" required/>
                 </div>
 
 
-                <div class="form-group m-3">
+                <div class="form-group-lg">
                     <select class="form-control">
                         <option selected>Service Type</option>
                         <option>Villa</option>
@@ -51,7 +69,7 @@
                     </select>
                 </div>
 
-                <div class="form-group m-3">
+                <div class="form-group-lg">
                     <select class="form-control">
                         <option selected>Customer Type</option>
                         <option>Diamond</option>

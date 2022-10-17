@@ -1,0 +1,14 @@
+.text-name{
+  font-size: 50px;
+  margin-left: 40%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: greenyellow;
+}
+table{
+  margin: auto;
+  width: 80%;
+}
+#body-font{
+  background: #BFC2FF;
+}

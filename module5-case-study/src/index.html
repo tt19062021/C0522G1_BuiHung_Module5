@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Module5CaseStudy</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+  <!-- Font Awesome Stylesheet -->
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/images">
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" id="cpswitch" href="assets/css/orange.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!--    &lt;!&ndash; Bootstrap Stylesheet &ndash;&gt;-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Owl Carousel Stylesheet -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.css">
+
+  <!-- Flex Slider Stylesheet -->
+  <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css"/>
+
+  <!--Date-Picker Stylesheet-->
+  <link rel="stylesheet" href="assets/css/datepicker.css">
+</head>
+<body>
+  <app-root></app-root>
+
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.flexslider.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/custom-navigation.js"></script>
+<script src="assets/js/custom-flex.js"></script>
+<script src="assets/js/custom-owl.js"></script>
+<script src="assets/js/custom-date-picker.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Page Scripts Ends -->
+<script src="../../assets/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../../assets/datatables/js/dataTables.bootstrap4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#facilityTable').dataTable({
+      "dom": 'lrtip',
+      "lengthChange": false,
+      "pageLength": 2,
+
+    });
+  });
+</script>
+
+<script>
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+  document.getElementById('myBtn').addEventListener("click", function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+</script>
+</html>
