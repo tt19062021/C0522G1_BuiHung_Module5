@@ -3,40 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>Module5CaseStudy</title>
+  <title>CaseStudyAngular</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.icon">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-
-  <!-- Font Awesome Stylesheet -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/images">
-  <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" id="cpswitch" href="assets/css/orange.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-
-  <!--    &lt;!&ndash; Bootstrap Stylesheet &ndash;&gt;-->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-  <!-- Owl Carousel Stylesheet -->
   <link rel="stylesheet" href="assets/css/owl.carousel.css">
   <link rel="stylesheet" href="assets/css/owl.theme.css">
-
-  <!-- Flex Slider Stylesheet -->
   <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css"/>
-
-  <!--Date-Picker Stylesheet-->
   <link rel="stylesheet" href="assets/css/datepicker.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
 </head>
 <body>
   <app-root></app-root>
 
 </body>
 
+<!-- Page Scripts Starts -->
 <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.flexslider.js"></script>
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
@@ -44,10 +37,13 @@
 <script src="assets/js/custom-flex.js"></script>
 <script src="assets/js/custom-owl.js"></script>
 <script src="assets/js/custom-date-picker.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/custom-video.js"></script>
 <!-- Page Scripts Ends -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script src="../../assets/datatables/js/jquery.dataTables.min.js"></script>
 <script src="../../assets/datatables/js/dataTables.bootstrap4.min.js"></script>
+
 <script>
   $(document).ready(function () {
     $('#facilityTable').dataTable({
@@ -59,22 +55,33 @@
   });
 </script>
 
-<script>
-  window.onscroll = function () {
-    scrollFunction()
-  };
-
-  function scrollFunction() {
-
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      document.getElementById("myBtn").style.display = "block";
-    } else {
-      document.getElementById("myBtn").style.display = "none";
-    }
-  }
-  document.getElementById('myBtn').addEventListener("click", function () {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+<script type='text/javascript'>
+  //<![CDATA[
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      $(window).scrollTop() > 700 ? $(".scroll-top").show() : $(".scroll-top").hide()
+    }), $(".scroll-top").click(function () {
+      $("html, body").animate({scrollTop: 0}, "slow")
+    }), $(window).width() < 768 && $(".scroll-top").css({bottom: "", right: ""})
   });
+  //]]>
 </script>
+<!--<script>-->
+<!--  window.onscroll = function () {-->
+<!--    scrollFunction()-->
+<!--  };-->
+
+<!--  function scrollFunction() {-->
+
+<!--    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {-->
+<!--      document.getElementById("myBtn").style.display = "block";-->
+<!--    } else {-->
+<!--      document.getElementById("myBtn").style.display = "none";-->
+<!--    }-->
+<!--  }-->
+<!--  document.getElementById('myBtn').addEventListener("click", function () {-->
+<!--    document.body.scrollTop = 0;-->
+<!--    document.documentElement.scrollTop = 0;-->
+<!--  });-->
+<!--</script>-->
 </html>

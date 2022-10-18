@@ -37,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module5-case-study" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -67,7 +67,9 @@
       <workItem from="1665924473637" duration="2052000" />
       <workItem from="1665979235061" duration="1084000" />
       <workItem from="1665990519474" duration="7864000" />
-      <workItem from="1666011063947" duration="699000" />
+      <workItem from="1666011063947" duration="1118000" />
+      <workItem from="1666055968429" duration="37000" />
+      <workItem from="1666079586540" duration="2583000" />
     </task>
     <servers />
   </component>
@@ -95,10 +97,10 @@
       <screen x="0" y="0" width="1440" height="852" />
     </state>
     <state x="451" y="173" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.852@0.0.1440.852" timestamp="1665732983923" />
-    <state x="501" y="181" key="FileChooserDialogImpl" timestamp="1666011074012">
+    <state x="501" y="181" key="FileChooserDialogImpl" timestamp="1666055989200">
       <screen x="0" y="0" width="1440" height="852" />
     </state>
-    <state x="501" y="181" key="FileChooserDialogImpl/0.0.1440.852@0.0.1440.852" timestamp="1666011074012" />
+    <state x="501" y="181" key="FileChooserDialogImpl/0.0.1440.852@0.0.1440.852" timestamp="1666055989200" />
     <state x="650" y="35" width="579" height="783" key="find.popup" timestamp="1665839996576">
       <screen x="0" y="0" width="1440" height="852" />
     </state>

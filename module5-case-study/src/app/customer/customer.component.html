@@ -1,0 +1,34 @@
+<div>
+  <div class="container-fluid">
+
+    <h3 class="text-name">CUSTOMER</h3>
+    <table class="table table-danger table-striped" id="customerTable" >
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Id Card</th>
+        <th>BirthDay</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Type</th>
+        <th>Update</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cus of customers;index as i">
+        <td>{{cus.name}}</td>
+        <td>{{cus.phone}}</td>
+        <td>{{cus.idCard}}</td>
+        <td>{{cus.birthDay}}</td>
+        <td>{{cus.gender}}</td>
+        <td>{{cus.address}}</td>
+        <td>{{cus.email}}</td>
+        <td>{{cus.customerType}}</td>
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

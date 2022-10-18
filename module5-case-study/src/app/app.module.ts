@@ -6,6 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FacilityComponent } from './facility/facility.component';
+import { CreateFacilityComponent } from './create-facility/create-facility.component';
+import { UpdateFacilityComponent } from './update-facility/update-facility.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { CustomerComponent } from './customer/customer.component';
+import { ContractComponent } from './contract/contract.component';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { CreateContractComponent } from './create-contract/create-contract.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +20,14 @@ import { FacilityComponent } from './facility/facility.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    FacilityComponent
+    FacilityComponent,
+    CreateFacilityComponent,
+    UpdateFacilityComponent,
+    UpdateCustomerComponent,
+    CustomerComponent,
+    ContractComponent,
+    CreateCustomerComponent,
+    CreateContractComponent
   ],
   imports: [
     BrowserModule

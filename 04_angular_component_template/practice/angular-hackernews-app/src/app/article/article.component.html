@@ -1,0 +1,50 @@
+
+<h2>Today's article</h2>
+<hr>
+
+<table class="table table-dark table-striped">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Url</th>
+    <th>Like</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let art of articles;index as i">
+    <td>{{i+1}}</td>
+    <td>{{art.title}}</td>
+    <td><a href="{{art.url}}">{{art.url}}</a></td>
+    <td>
+      <app-like (eventEmitter)="reciveFromLike($event)"></app-like>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<!--<div *ngFor="let art of articles">-->
+<!--  <a href="{{art.url}}" target="_blank">{{art.title}}</a>: <app-like></app-like>-->
+<!--</div>-->
+<hr>
+
+<div>
+  <h2>Article Information</h2>
+  <table class="margin-table">
+    <tr>
+      <td>Title:</td>
+      <td><textarea [(ngModel)]="article.title" cols="70"></textarea></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td>
+        <textarea [(ngModel)]="article.url" cols="70"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button style="margin-left: 45%" (click)="addNewArticle()">Add</button></td>
+    </tr>
+  </table>
+</div>
+

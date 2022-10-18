@@ -1,0 +1,23 @@
+.myCSS {
+  background-color: #8b9fb2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.thu-nghiem-zoom img{
+  display:block;
+  transition: all .3s ease;
+}
+.thu-nghiem-zoom img:hover{
+  transform: scale(2.0); /* cỡ zoom khi di chuột vào */
+}
+.thu-nghiem-zoom div{
+  display:block;
+  overflow: hidden;
+}

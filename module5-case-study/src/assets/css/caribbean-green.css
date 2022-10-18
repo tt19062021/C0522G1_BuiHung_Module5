@@ -187,7 +187,7 @@ p{
 }
 
 @media(max-width:991px){
-	
+
 	.back-size{
 		background-size:cover !important;
 	}
@@ -257,7 +257,7 @@ p{
 	border:0px;
 	border-radius:0px;
 }
-  
+
 .main-navbar .navbar-header .navbar-brand {
   color:#000;
   font-weight:900;
@@ -318,9 +318,9 @@ p{
 	color:white;
 }
 
-.main-navbar .navbar-nav > li.dropdown.active.open > a, 
+.main-navbar .navbar-nav > li.dropdown.active.open > a,
 .main-navbar .navbar-nav > li.dropdown.active > a:hover,
-.main-navbar .navbar-nav > li.dropdown.open > a, 
+.main-navbar .navbar-nav > li.dropdown.open > a,
 .main-navbar .navbar-nav > li.dropdown.open > ul.dropdown-menu > a:hover{
 	color:#00cc99;
   	background:none;
@@ -363,7 +363,7 @@ p{
 	.main-navbar.affix {
 		box-shadow:0px 2px 5px rgba(0,0,0,0.2);
 	}
-	
+
 	.main-navbar .navbar-nav li .dropdown-menu li a{
 		border-bottom:1px solid #ebebeb;
 	}
@@ -374,7 +374,7 @@ p{
 	.main-navbar{
 		background:white;
 	}
-	
+
 	.main-navbar.affix{
 		box-shadow:0px 2px 5px rgba(0,0,0,0.2);
 	}
@@ -383,15 +383,15 @@ p{
 /************* NAVBAR-TRANSPARENT *************/
 
 @media(min-width:1200px){
-	
+
 	.main-navbar.navbar-transparent .navbar-nav > li > a{
 		color:white;
 	}
-	
+
 	.main-navbar.navbar-transparent .navbar-nav > li:last-child > a{
 		color:#00cc99;
 	}
-	
+
 	.main-navbar.navbar-transparent .nav > li > a:hover,
 	.main-navbar.navbar-transparent .nav > li > a:focus,
 	.main-navbar.navbar-transparent .nav > li > a:focus:hover,
@@ -401,11 +401,11 @@ p{
 	.main-navbar.navbar-transparent .nav > li.active > a:focus:hover  {
 		color: #00cc99;
 	}
-	
+
 	.main-navbar.navbar-transparent.affix .navbar-nav > li > a{
 		color:#58595b;
 	}
-	
+
 	.main-navbar.navbar-transparent.affix .nav > li > a:hover,
 	.main-navbar.navbar-transparent.affix .nav > li > a:focus,
 	.main-navbar.navbar-transparent.affix .nav > li > a:focus:hover,
@@ -418,27 +418,27 @@ p{
 }
 
 @media(min-width:768px){
-	
+
 	.main-navbar.navbar-transparent{
 		background:transparent;
 	}
-	
+
 	.main-navbar.navbar-transparent .navbar-brand{
 		color:white;
 	}
-	
+
 	.main-navbar.navbar-transparent .navbar-toggle span{
 		background:white;
 	}
-	
+
 	.main-navbar.navbar-transparent.affix{
 		background:white;
 	}
-	
+
 	.main-navbar.navbar-transparent.affix .navbar-brand{
 		color:#000;
 	}
-	
+
 	.main-navbar.navbar-transparent.affix .navbar-toggle span{
 		background:#000;
 	}
@@ -481,9 +481,9 @@ p{
 	background-color: transparent;
 }
 
-.main-navbar.navbar-colored .navbar-nav > li.dropdown.active.open > a, 
+.main-navbar.navbar-colored .navbar-nav > li.dropdown.active.open > a,
 .main-navbar.navbar-colored .navbar-nav > li.dropdown.active > a:hover,
-.main-navbar.navbar-colored .navbar-nav > li.dropdown.open > a, 
+.main-navbar.navbar-colored .navbar-nav > li.dropdown.open > a,
 .main-navbar.navbar-colored .navbar-nav > li.dropdown.open > ul.dropdown-menu > a:hover{
 	color:#000;
   	background:none;
@@ -513,7 +513,7 @@ p{
 }
 
 @media(max-width:767px){
-	
+
 	.main-navbar.navbar-colored{
 		background:#00cc99;
 	}
@@ -557,7 +557,7 @@ p{
 }
 
 @media(max-width:767px){
-	
+
 	.navbar-black{
 		background:rgba(0,0,0,0.4);
 	}
@@ -618,7 +618,7 @@ p{
     width: 0.5em;
 	background:#f2f2f2;
 }
- 
+
 #mySidenav::-webkit-scrollbar-track{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
@@ -687,12 +687,12 @@ p{
 #main-menu .list-group .sub-menu > .list-group-item.active,
 #main-menu .list-group .sub-menu > .list-group-item:hover,
 #main-menu .list-group .sub-menu > .list-group-item:focus{
-	background:#e6e6e6;	
+	background:#e6e6e6;
 	color:#303030;
 }
 
 @media(min-width:1200px){
-	
+
 	#mySidenav{
 		transform:translateX(120%) !important;
 	}
@@ -814,7 +814,7 @@ p{
 #search-tabs-3 .tab-pane form input,
 #search-tabs-3 .tab-pane form input::placeholder,
 #search-tabs-3 .tab-pane form select{
-	color:#8c8d8f;	
+	color:#8c8d8f;
 }
 
 #search-tabs-3 .tab-pane form select option{
@@ -857,7 +857,7 @@ p{
 
 .main-block:hover .main-img img{
 	transform:scale(1.15);
-} 
+}
 
 .main-info{
 	background:white;
@@ -1047,14 +1047,14 @@ p{
 }
 
 @media(min-width:992px) and (max-width:1199px){
-	
+
 	.flight-timing li:first-child{
 		border-right:0px;
 	}
 }
 
 @media(max-width:420px){
-	
+
 	.flight-timing li:first-child{
 		border-right:0px;
 	}
@@ -1073,7 +1073,7 @@ p{
 /* -----------------------------------------------------
 		Destination Block
    ----------------------------------------------------- */
-   
+
 .destination-block{
 	border:1px solid #e6e7e8;
 }
@@ -1094,7 +1094,7 @@ p{
 .destination-title .destination-price{
 	color:#00cc99;
 }
- 
+
 .destination-title .btn{
 	color:white;
 }
@@ -1179,7 +1179,7 @@ p{
 
 /*********** LIGHTGREY-FEATURES ***********/
 
-#best-features.lightgrey-features{	
+#best-features.lightgrey-features{
 	background:#f5f5f5;
 	color:#000;
 }
@@ -1295,7 +1295,7 @@ p{
    ----------------------------------------------------- */
 
 /************** VIDEO-BANNER **************/
-  
+
 #video-banner{
 	background: linear-gradient(rgba(0, 0, 0,0.6),rgba(0, 0, 0,0.6)),url('../images/video-banner.jpg') 50% 37%;
 	background-size:140%;
@@ -1492,7 +1492,7 @@ p{
 /************* HOTEL-PACKAGES *************/
 
 #hotel-packages{
-	background:#eeeeee;	
+	background:#eeeeee;
 }
 
 .hotel-package:hover{
@@ -1765,13 +1765,13 @@ p{
 /* -----------------------------------------------------
 		Page Cover
    ----------------------------------------------------- */
-   
+
 .page-cover{
 	color:white;
-}	
+}
 
 .page-cover::before{
-	background:linear-gradient( to right, rgba(0, 0, 0,1) 0%,rgba(0, 0, 0,1) 26%, rgba(0, 0, 0,0.6) 46%, rgba(0, 0, 0,0) 64%,rgba(0, 0, 0,0) 100%);	
+	background:linear-gradient( to right, rgba(0, 0, 0,1) 0%,rgba(0, 0, 0,1) 26%, rgba(0, 0, 0,0.6) 46%, rgba(0, 0, 0,0) 64%,rgba(0, 0, 0,0) 100%);
 }
 
 .page-cover .breadcrumb{
@@ -1788,9 +1788,9 @@ p{
 }
 
 @media(max-width:768px){
-	
+
 	.page-cover::before{
-		background:linear-gradient( to right, rgba(0, 0, 0,1) 0%,rgba(0, 0, 0,1) 26%, rgba(0, 0, 0,0.6) 66%, rgba(0, 0, 0,0) 84%,rgba(0, 0, 0,0) 100%);	
+		background:linear-gradient( to right, rgba(0, 0, 0,1) 0%,rgba(0, 0, 0,1) 26%, rgba(0, 0, 0,0.6) 66%, rgba(0, 0, 0,0) 84%,rgba(0, 0, 0,0) 100%);
 	}
 }
 
@@ -1981,7 +1981,7 @@ p{
 	border-top:1px solid #808285;
 	background:#f5f5f5;
 }
-  
+
 .side-bar .filter-block .price-slider input{
 	background:transparent;
 	border:0px;
@@ -2052,7 +2052,7 @@ p{
 .side-bar .booking-form .form-group input,
 .side-bar .booking-form .form-group input::placeholder,
 .side-bar .booking-form .form-group select{
-	color:#808285;	
+	color:#808285;
 }
 
 .side-bar .booking-form .form-group select option{
@@ -2140,7 +2140,7 @@ p{
    ----------------------------------------------------- */
 
 .block-title a{
-	color:#000;	
+	color:#000;
 }
 
 .block-info{
@@ -2265,7 +2265,7 @@ p{
 }
 
 @media(max-width:991px){
-	
+
 	.f-list-block .flight-timing li:first-child{
 		border-right:0px;
 	}
@@ -2280,7 +2280,7 @@ p{
 /* -----------------------------------------------------
 		Pagination
    ----------------------------------------------------- */
-   
+
 .pages .pagination li a{
 	border-radius:0px;
 	background:#e6e7e8;
@@ -2332,11 +2332,11 @@ p{
 }
 
 @media(max-width:768px){
-	
+
 	.detail-tabs .nav-tabs.nav-justified > .active > a{
 		border-bottom-color:#e6e7e8;
 	}
-	
+
 	.detail-tabs .tab-content .tab-pane{
 		border-top:1px solid #e6e7e8;
 	}
@@ -2345,7 +2345,7 @@ p{
 /* -----------------------------------------------------
 		Detail Pages Slider
    ----------------------------------------------------- */
-   
+
 .detail-slider .features li{
 	background:rgba(0,0,0,0.6);
 	color:white;
@@ -2686,7 +2686,7 @@ p{
 	opacity:1;
 }
 
-.recent-activity td.recent-ac-text{`
+.recent-activity td.recent-ac-text{
 	color:#303030;
 }
 
@@ -2716,7 +2716,7 @@ p{
 }
 
 @media(max-width:768px){
-	
+
 	.dashboard-listing .table-responsive{
 		border:0px;
 	}
@@ -2814,17 +2814,17 @@ p{
 }
 
 @media(min-width:768px){
-	
+
 	.wishlist tr{
 		border:1px solid #ddd;
-	}	
+	}
 }
 
 @media(max-width:767px){
-	
+
 	.wishlist tr{
 		border-bottom:1px solid #ddd;
-	}	
+	}
 }
 
 /************** CARD PAGE **************/
@@ -2922,11 +2922,11 @@ p{
 }
 
 @media(max-width:767px){
-	
+
 	.byf-info .nav-tabs li{
 		border-top:1px solid rgba(255,255,255,0.1);
 	}
-	
+
 	.byf-info .nav-tabs li a{
 		border-radius:0px;
 	}
@@ -2984,7 +2984,7 @@ p{
 }
 
 #popular-destinations li:before{
-	color:#00cc99;	
+	color:#00cc99;
 }
 
 #popular-destinations li a{
@@ -3010,7 +3010,7 @@ p{
 }
 
 .thank-you-note:before{
-	color:lightgrey;	
+	color:lightgrey;
 	animation: thumbs-up 3s infinite;
 	animation-timing-function: ease-in-out;
 }

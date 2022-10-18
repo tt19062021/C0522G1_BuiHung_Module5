@@ -18,7 +18,7 @@ p{
 }
 
 #hero{
-	background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('../preview-images/pattern.jpg');
+	background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('~assets/preview-images/pattern.jpg');
 	background-size:cover;
 	color:white;
 	border-top:15px solid #faa61a;
@@ -359,63 +359,63 @@ p{
 }
 
 @media(min-width:992px){
-	
+
 	.hero-text p{
 		width:90%;
 	}
 }
 
 @media(max-width:991px){
-	
+
 	.hero-text{
 		text-align:center;
 		margin-bottom:50px;
 	}
-	
+
 	.logo{
 		font-size:53px;
 		margin:10px 0px 15px 0px;
 	}
-	
+
 	.logo span .fa{
 		font-size:63px;
 	}
-	
+
 	.hero-text h2{
 		font-size:25px;
 	}
-	
+
 	.hero-text .btn{
 		font-size:22px;
 	}
-	
+
 }
 
 @media(max-width:768px){
-	
+
 	.heading h1{
 		font-size:70px;
 	}
-	
+
 	.heading p{
 		font-size:18px;
 		width:85%;
 	}
-	
+
 	.innerpage-heading h2{
 		font-size:25px;
 	}
-	
+
 	.innerpage-heading h2::before,
 	.innerpage-heading h2::after{
 		width:40px;
 	}
-	
+
 	.innerpage-heading h2::before{
 		top:18px;
 		left:-40px;
 	}
-	
+
 	.innerpage-heading h2::after{
 		top:18px;
 		right:-40px;
@@ -423,7 +423,7 @@ p{
 }
 
 @media(max-width:576px){
-	
+
 	#hero .row{
 		padding:90px 0px 80px;
 	}
@@ -433,12 +433,12 @@ p{
 		width:150px;
 		height:150px;
 	}
-		
+
 	#hero::before{
 		top:-95px;
 		left:-75px;
 	}
-	
+
 	#hero::after{
 		bottom:-95px;
 		left:-75px;
@@ -448,57 +448,57 @@ p{
 		font-size:42px;
 		margin:7px 0px 13px 0px;
 	}
-	
+
 	.logo span .fa{
 		font-size:52px;
 		margin-right:14px;
 	}
-	
+
 	.hero-text h2{
 		font-size:20px;
 	}
-	
+
 	.hero-text p{
 		font-size:15px;
 	}
-	
+
 	.hero-text .btn{
 		font-size:18px;
 	}
-	
+
 	.heading h1{
 		font-size:60px;
 	}
-	
+
 	.innerpage-heading h2{
 		font-size:22px;
 	}
-	
+
 	.innerpage-heading h2::before,
 	.innerpage-heading h2::after{
 		width:35px;
 	}
-	
+
 	.innerpage-heading h2::before{
 		top:16px;
 		left:-35px;
 	}
-	
+
 	.innerpage-heading h2::after{
 		top:16px;
 		right:-35px;
 	}
-	
-		
+
+
 	#footer p{
 		font-size:17px;
 		width:90%;
 	}
-	
+
 	#footer .btn{
 		font-size:18px;
 	}
-	
+
 	#footer ul li .fa{
 		font-size:20px;
 		height:60px;
@@ -507,20 +507,20 @@ p{
 }
 
 @media(max-width:420px){
-	
+
 	.logo{
 		font-size:34px;
 		margin:7px 0px 13px 0px;
 	}
-	
+
 	.logo span .fa{
 		font-size:44px;
 	}
-	
+
 	.hero-text h2{
 		font-size:19px;
 	}
-	
+
 	.hero-text .btn{
 		font-size:16px;
 	}
@@ -531,12 +531,12 @@ p{
 }
 
 @keyframes slide-top{
-	
+
 	0% {
 	  opacity: 0;
 	  transform: translateY(100%);
-	} 
-	
+	}
+
 	100% {
 	  opacity: 1;
 	  transform: translateY(0%);
@@ -573,12 +573,12 @@ p{
 }
 
 @media(min-width:992px){
-	
+
 	.light{
 		height:300px;
 		width:300%;
 	}
-	
+
 	@keyframes light-1 {
 		0% {left: 200%;}
 		25% {left: 0%;}
@@ -586,7 +586,7 @@ p{
 		75% {left: 0%;}
 		100% {left: 200%;}
 	}
-	
+
 	@keyframes light-2 {
 		0% {right: 200%;}
 		25% {right: 0%;}
@@ -597,12 +597,12 @@ p{
 }
 
 @media(min-width:670px) and (max-width:991px){
-	
+
 	.light{
 		height:200px;
 		width:600%;
 	}
-	
+
 	@keyframes light-1 {
 		0% {left: 400%;}
 		25% {left: 0%;}
@@ -610,7 +610,7 @@ p{
 		75% {left: 0%;}
 		100% {left: 400%;}
 	}
-	
+
 	@keyframes light-2 {
 		0% {right: 400%;}
 		25% {right: 0%;}
