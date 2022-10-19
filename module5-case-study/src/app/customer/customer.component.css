@@ -1,5 +1,4 @@
 .text-name{
-
   font-size: 50px;
   margin-left: 40%;
   padding-top: 40px;
@@ -17,4 +16,7 @@ td{
 table{
   width: 100%;
   height: auto;
+}
+.customer-body{
+  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0));
 }

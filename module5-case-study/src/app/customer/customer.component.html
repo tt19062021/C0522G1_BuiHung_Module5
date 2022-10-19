@@ -1,10 +1,11 @@
-<div>
+<div class="customer-body">
   <div class="container-fluid">
 
     <h3 class="text-name">CUSTOMER</h3>
     <table class="table table-danger table-striped" id="customerTable" >
       <thead>
       <tr>
+        <th>#</th>
         <th>Name</th>
         <th>Phone</th>
         <th>Id Card</th>
@@ -18,6 +19,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let cus of customers;index as i">
+        <td>{{i+1}}</td>
         <td>{{cus.name}}</td>
         <td>{{cus.phone}}</td>
         <td>{{cus.idCard}}</td>
