@@ -1,0 +1,70 @@
+<div class="container" style="height: 400px;width: 50%">
+  <h2 style="margin-left: 40%">Register</h2>
+  <form [formGroup]="formRegister">
+    <div class="mb-3 form-check">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" id="exampleInputEmail1" formControlName="gmail" class="form-control">
+      <div *ngIf="formRegister.controls.gmail.hasError('email')
+&& formRegister.controls.gmail.dirty" class="form-text text-danger">Vui lòng nhập đúng định dạng!
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <label class="form-label">Country:</label>
+      <select formControlName="country">
+        <option value="DN">Đà Nẵng</option>
+        <option value="HCM">Hồ Chí Minh</option>
+        <option value="HN">Hà Nội</option>
+        <option value="CT">Cần Thơ</option>
+      </select>
+    </div>
+
+    <div class="mb-3 form-check">
+      <label class="form-label">Age:</label>
+      <input formControlName="age" type="number" class="form-control">
+      <div *ngIf="formRegister.controls.age.hasError('min')
+&& formRegister.controls.age.dirty" class="form-text text-danger"> Tuổi phải >=18
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <label class="form-label">Gender:</label>
+      <input type="radio" value="Male" formControlName="gender">Male
+      <input type="radio" value="FeMale" formControlName="gender">FeMale
+    </div>
+
+    <div class="mb-3 form-check">
+      <label class="form-label">Phone:</label>
+      <input type="text" value="Male" formControlName="phone" class="form-control">
+      <div *ngIf="formRegister.controls.phone.hasError('pattern') &&
+formRegister.controls.phone.dirty" class="form-text text-danger">Sdt là 10 số bắt đầu bằng +84
+      </div>
+    </div>
+
+    <div formGroupName="pwGroup" class="mb-3 form-check">
+      <label class="form-label">Password:</label>
+      <input type="password" formControlName="password" class="form-control">
+
+      <div *ngIf="formRegister.get('pwGroup').hasError('minlength', 'password') &&
+      formRegister.get('pwGroup').get('password').touched" class="form-text text-danger">Độ dài pass phải > 5
+      </div>
+
+      <label class="form-label">Confirm Password:</label>
+      <input type="password" formControlName="confirmPass" class="form-control">
+
+      <div *ngIf="formRegister.controls.pwGroup.hasError('passNotMatch') &&
+formRegister.controls.pwGroup.dirty" class="form-text text-danger">Mật Khẩu không khớp
+      </div>
+
+
+
+      <div *ngIf="formRegister.get('pwGroup').hasError('minlength', 'confirmPass') &&
+      formRegister.get('pwGroup').get('confirmPass').touched" class="form-text text-danger">Độ dài pass phải > 5
+      </div>
+    </div>
+
+    <button style="margin-left: 46%" type="button" class="btn btn-primary" (click)="giveFormValue()"
+            [disabled]="formRegister.invalid">Submit
+    </button>
+  </form>
+</div>
