@@ -1,0 +1,13 @@
+<h2>DICTIONARY</h2>
+<table border="1px">
+  <tr>
+    <td>#</td>
+    <td>Word</td>
+    <td>Translate</td>
+  </tr>
+  <tr *ngFor="let eng of dictionaryList, index as i">
+    <td>{{i+1}}</td>
+    <td>{{eng.word}}</td>
+    <td><a routerLink="detail/{{eng.word}}">Tranlate</a></td>
+  </tr>
+</table>
