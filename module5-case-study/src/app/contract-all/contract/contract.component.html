@@ -1,0 +1,35 @@
+<div class="contract-body">
+  <div class="container-fluid">
+
+    <h3 class="text-name">CONTRACT</h3>
+    <table class="table table-danger table-striped" id="contractTable" >
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Star Day</th>
+        <th>End Day</th>
+        <th>Deposit</th>
+        <th>Service</th>
+        <th>Update</th>
+        <th>Delete</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cont of contracts;index as i">
+        <td>{{i+1}}</td>
+        <td>{{cont.customerName}}</td>
+        <td>{{cont.startDay}}</td>
+        <td>{{cont.endDay}}</td>
+        <td>{{cont.deposit}}</td>
+        <td>{{cont.facility}}</td>
+
+        <td><a class="btn btn-primary" href="#" role="button">Update</a></td>
+        <td><a class="btn btn-danger" href="#" role="button">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

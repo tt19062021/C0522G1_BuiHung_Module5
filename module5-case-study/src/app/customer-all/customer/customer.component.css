@@ -1,0 +1,22 @@
+.text-name{
+  font-size: 50px;
+  margin-left: 40%;
+  padding-top: 40px;
+  color: black;
+}
+th{
+  font-family: Tahoma;
+  font-size: 20px;
+}
+td{
+  font-size: 15px;
+  color: seagreen;
+
+}
+table{
+  width: 100%;
+  height: auto;
+}
+.customer-body{
+  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0));
+}

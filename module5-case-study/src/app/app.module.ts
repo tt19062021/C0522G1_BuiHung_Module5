@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './layout/home/home.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {FacilityComponent} from './facility-all/facility/facility.component';
+import {FuramaRoutingModule} from './furama-routing.module';
+import {RouterModule} from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
+import {CreateFacilityComponent} from './facility-all/create-facility/create-facility.component';
+import {UpdateFacilityComponent} from './facility-all/update-facility/update-facility.component';
+import {UpdateCustomerComponent} from './customer-all/update-customer/update-customer.component';
+import {CustomerComponent} from './customer-all/customer/customer.component';
+import {ContractComponent} from './contract-all/contract/contract.component';
+import {CreateCustomerComponent} from './customer-all/create-customer/create-customer.component';
+import {CreateContractComponent} from './contract-all/create-contract/create-contract.component';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { FacilityComponent } from './facility/facility.component';
-import { CreateFacilityComponent } from './create-facility/create-facility.component';
-import { UpdateFacilityComponent } from './update-facility/update-facility.component';
-import { UpdateCustomerComponent } from './update-customer/update-customer.component';
-import { CustomerComponent } from './customer/customer.component';
-import { ContractComponent } from './contract/contract.component';
-import { CreateCustomerComponent } from './create-customer/create-customer.component';
-import { CreateContractComponent } from './create-contract/create-contract.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +35,10 @@ import { CreateContractComponent } from './create-contract/create-contract.compo
     CreateContractComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FuramaRoutingModule,
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

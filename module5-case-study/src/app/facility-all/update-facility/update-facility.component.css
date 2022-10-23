@@ -1,0 +1,16 @@
+
+.text-name{
+
+  font-size: 45px;
+  margin-left: 25%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: black;
+}
+table{
+  margin: auto;
+  width: 80%;
+}
+.form-group-lg{
+  padding-bottom: 10px;
+}

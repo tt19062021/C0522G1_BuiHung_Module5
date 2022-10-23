@@ -1,0 +1,85 @@
+<div class="font-body">
+  <div class="container-fluid" style="width: 50% ">
+
+    <div class="side-bar-block booking-form-block">
+      <div class="booking-form">
+        <h3 class="text-name"><b>Update Service</b></h3>
+        <form [formGroup]="facilityForm" (ngSubmit)="updateFacility()">
+          <div class="form-group-lg">
+            <input type="hidden" class="form-control"  formControlName="id" >
+          </div>
+          <div class="form-group-lg">
+            <label for="serviceName">Service Name: </label>
+            <input type="text" id="serviceName" class="form-control" formControlName="name" required/>
+          </div>
+
+          <div class="form-group-lg m-3">
+            <label for="area">Area: </label>
+            <input id="area" type="number" class="form-control" placeholder="Area"  formControlName="area" required/>
+          </div>
+
+          <div class="form-group-lg m-3">
+            <label for="cost">Cost: </label>
+            <input id="cost" type="number" class="form-control" placeholder="Cost" formControlName="cost" required/>
+          </div>
+
+          <div class="form-group-lg m-3">
+            <label for="maxPer">Max People: </label>
+            <input id="maxPer" type="number" class="form-control" placeholder="Max People" formControlName="maxPeople" required/>
+          </div>
+
+          <div class="form-group-lg m-3">
+            <label for="floor">Number Of Floors: </label>
+            <input id="floor" type="number" class="form-control" placeholder="Floors" formControlName="floors" required/>
+          </div>
+          <div class="form-group-lg m-3">
+            <label for="pools">Pool Of Area: </label>
+            <input id="pools" type="number" class="form-control" placeholder="Pool Area" formControlName="poolArea" required/>
+          </div>
+
+          <div class="form-group-lg m-3">
+            <label for="des">Description Other Convert: </label>
+            <input id="des" type="text" class="form-control" placeholder="Description Other" formControlName="desOtherConver" required/>
+          </div>
+          <div class="form-group-lg m-3">
+            <label for="free">Service Free: </label>
+            <input id="free" type="text" class="form-control" placeholder="Service Free" formControlName="serviceFree" required/>
+          </div>
+          <div class="form-group-lg m-3">
+            <label for="standardR">Standard Room: </label>
+            <input id="standardR" type="text" class="form-control" placeholder="Standard Room" formControlName="standardRoom" required/>
+          </div>
+          <div class="form-group-lg m-3">
+            <label for="imager">Image: </label>
+            <input id="imager" type="text" class="form-control" placeholder="Image" formControlName="image" required/>
+          </div>
+
+          <div class="form-group-lg m-3">
+            <label for="serType">Service Type: </label>
+            <select id="serType" class="form-control" formControlName="facilityType">
+              <option selected>Service Type</option>
+              <option value="Villa">Villa</option>
+              <option value="House">House</option>
+              <option value="Room">Room</option>
+            </select>
+          </div>
+
+          <div class="form-group-lg m-3">
+            <label for="rent">Rent Type: </label>
+            <select id="rent" class="form-control" formControlName="rentType">
+              <option selected>Rent Type</option>
+              <option value="Hour">Hour</option>
+              <option value="Day">Day</option>
+              <option value="Month">Month</option>
+              <option value="Year">Year</option>
+            </select>
+          </div>
+
+          <button class="btn btn-info" style="margin-left:40% ;margin-bottom: 20px;height: 40px;width: 100px">Update</button>
+        </form>
+
+      </div><!-- end booking-form -->
+    </div><!-- end side-bar-block -->
+
+  </div>
+</div>

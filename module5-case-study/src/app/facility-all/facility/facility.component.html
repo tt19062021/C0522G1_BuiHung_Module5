@@ -1,0 +1,72 @@
+
+<div class="customer-body">
+  <div class="container-fluid">
+    <h3 class="text-name">SERVICE</h3>
+
+<!--    <div class="row">-->
+<!--      <div class="col-lg-4">-->
+<!--        <a style="margin-left: 9%; margin-bottom: 20px" class="btn btn-lg btn-info" routerLink="create"  role="button">New Service</a>-->
+<!--      </div>-->
+<!--      <div class="col-lg-8">-->
+<!--        <div class="row">-->
+<!--          <input style="width: 50%;" class="form-control" type="search"-->
+<!--                 placeholder="search..by..name" aria-label="Search"-->
+<!--                 name="name">-->
+<!--          &lt;!&ndash;        <input style="background-color: #f2f2f2; border: 1px solid olivedrab" class="form-control me-2" type="search"&ndash;&gt;-->
+<!--          &lt;!&ndash;               placeholder="search..by..phone" aria-label="Search"&ndash;&gt;-->
+<!--          &lt;!&ndash;               name="phone">&ndash;&gt;-->
+<!--          &lt;!&ndash;        <input style="background-color: #f2f2f2; border: 1px solid olivedrab" class="form-control me-2" type="search"&ndash;&gt;-->
+<!--          &lt;!&ndash;               placeholder="search..by..address" aria-label="Search"&ndash;&gt;-->
+<!--          &lt;!&ndash;               name="address">&ndash;&gt;-->
+<!--          <button  class="btn btn-info" type="submit" >Search</button>-->
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--    </div>-->
+
+    <table class="table table-striped" id="facilityTable" >
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Cost</th>
+        <th>Floors</th>
+        <th>Max</th>
+        <th>Des</th>
+        <th>Service</th>
+        <th>Pool</th>
+        <th>Type</th>
+        <th>SerTy</th>
+        <th>Rent</th>
+        <th>Image</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cus of facilityList;index as i">
+        <td>{{i+1}}</td>
+        <td>{{cus.name}}</td>
+        <td>{{cus.area}}</td>
+        <td>{{cus.cost}}</td>
+        <td>{{cus.floors}}</td>
+        <td>{{cus.maxPeople}}</td>
+        <td>{{cus.desOtherConver}}</td>
+        <td>{{cus.serviceFree}}</td>
+        <td>{{cus.poolArea}}</td>
+        <td>{{cus.standardRoom}}</td>
+        <td>{{cus.facilityType}}</td>
+        <td>{{cus.rentType}}</td>
+        <td><img class="img-size" src="{{cus.image}}"></td>
+
+        <td><a class="btn btn-primary" routerLink="update/{{cus.id}}" role="button">Update</a></td>
+        <td><a class="btn btn-danger" routerLink="delete/{{cus.id}}" role="button">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
