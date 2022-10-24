@@ -1,0 +1,12 @@
+<h1>Xoa the loai</h1>
+<form [formGroup]="categoryForm" (ngSubmit)="deleteCategory(id)">
+  <table >
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <button type="submit" >Xóa</button>
+    </tr>
+  </table>
+</form>

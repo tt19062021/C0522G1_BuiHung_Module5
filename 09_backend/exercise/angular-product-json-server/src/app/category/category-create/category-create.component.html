@@ -1,0 +1,13 @@
+<h1>Tạo sản Thể loại</h1>
+<form [formGroup]="categoryForm" (ngSubmit)="saveCategory()">
+  <table>
+    <tr>
+      <td>Tên thể loại:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
+    </tr>
+  </table>
+</form>

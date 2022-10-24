@@ -1,0 +1,15 @@
+<h1>Thể loại sản phẩm</h1>
+<a routerLink="/category/create">Thêm loại sản phẩm</a>
+<table border="1px">
+  <tr>
+    <td>STT</td>
+    <td>Tên</td>
+    <td colspan="2px"></td>
+  </tr>
+  <tr *ngFor="let cate of categotys; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{cate.name}}</td>
+    <td><a routerLink="/category/edit/{{cate.id}}">Edit</a></td>
+    <td><a routerLink="/category/delete/{{cate.id}}">Delete</a></td>
+  </tr>
+</table>

@@ -1,0 +1,74 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "AK-47",
+      "price": 5000,
+      "description": "Gun",
+      "category": {
+        "id": 1,
+        "name": "Gun"
+      }
+    },
+    {
+      "id": 2,
+      "name": "R-15",
+      "price": 6000,
+      "description": "ShotGun",
+      "category": {
+        "id": 2,
+        "name": "ShotGun"
+      }
+    },
+    {
+      "id": 3,
+      "name": "B-43",
+      "price": 5000,
+      "description": "Gun",
+      "category": {
+        "id": 1,
+        "name": "Gun"
+      }
+    },
+    {
+      "id": 4,
+      "name": "R-16",
+      "price": 7000,
+      "description": "Gun",
+      "category": {
+        "id": 1,
+        "name": "Gun"
+      }
+    },
+    {
+      "id": 4,
+      "name": "B-22",
+      "price": 5000,
+      "description": "Shotgun",
+      "category": {
+        "id": 2,
+        "name": "ShotGun"
+      }
+    },
+    {
+      "id": 4,
+      "name": "B-51",
+      "price": 10000,
+      "description": "Gun",
+      "category": {
+        "id": 1,
+        "name": "Gun"
+      }
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Gun"
+    },
+    {
+      "id": 2,
+      "name": "ShotGun"
+    }
+  ]
+}
