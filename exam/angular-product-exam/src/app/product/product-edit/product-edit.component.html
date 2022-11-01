@@ -1,0 +1,107 @@
+<div class="mx-5 px-5 pt-3 pb-5">
+  <h2 class="text-center fw-bold">THÊM MỚI KHÁCH HÀNG</h2>
+
+  <p class="text-center">
+    <a routerLink=""><i class="fa-solid fa-backward"></i>Quay lại trang khách hàng</a>
+  </p>
+
+  <form [formGroup]="productForm" (ngSubmit)="editProduct()">
+    <table>
+      <tr>
+        <td>Mã Số Sổ</td>
+        <select formControlName="category" [compareWith]="compareWithId" disabled>
+          <option  [ngValue]="temp" *ngFor="let temp of categoryList" >{{temp.name}}</option>
+        </select>
+      </tr>
+      <tr>
+        <td>Mã Khách Hàng :</td>
+        <td><input type="number" formControlName="id" disabled></td>
+      </tr>
+      <tr>
+        <td>Tên Khách Hàng:</td>
+        <td><input type="text" formControlName="name">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.name.hasError('required') &&
+                      productForm.controls.name.touched">
+            Không được để trống !
+          </div>
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.name.hasError('pattern') &&
+                      productForm.controls.name.touched">
+            Tên không chứa số !
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Ngày Mở:</td>
+        <td><input type="date" formControlName="startDay">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.startDay.hasError('required') &&
+                      productForm.controls.startDay.touched">
+            Không được để trống !
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Thời gian gửi:</td>
+        <td><input type="date" formControlName="startSend">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.startSend.hasError('required') &&
+                      productForm.controls.startSend.touched">
+            Không được để trống !
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Kỳ Hạn</td>
+        <select formControlName="period" >
+          <option value= 3>3 tháng</option>
+          <option value= 6>6 tháng</option>
+          <option value= 12>12 tháng</option>
+          <option value= 60>5 năm</option>
+          <option value= 1000>vô thời hạn</option>
+        </select>
+      </tr>
+      <tr>
+        <td>Số tiền gửi:</td>
+        <td><input type="number" formControlName="money">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.money.hasError('required') &&
+                      productForm.controls.money.touched">
+            Không được để trống !
+          </div>
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.money.hasError('min') &&
+                      productForm.controls.money.touched">
+            Số tiền gửi > 10.000.000 VND !
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Lãi suất:(%/năm)</td>
+        <td><input type="number" formControlName="interest">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.interest.hasError('required') &&
+                      productForm.controls.interest.touched">
+            Không được để trống !
+          </div>
+      </tr>
+
+      <tr>
+        <td>Ưu đải:</td>
+        <td><input type="text" formControlName="promotion">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="productForm.controls.promotion.hasError('required') &&
+                      productForm.controls.promotion.touched">
+            Không được để trống !
+          </div>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button>Sửa</button></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
