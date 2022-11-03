@@ -15,7 +15,7 @@ public class CustomerPassBookService implements ICustomerPassBookService {
     @Autowired
     private ICustomerPassBookRepository iCustomerPassBookRepository;
     @Override
-    public Page<Customer> findAll(Pageable pageable) {
-        return iCustomerPassBookRepository.findAll(pageable);
+    public Page<Customer> findAll(String customerName , Pageable pageable) {
+        return iCustomerPassBookRepository.findAllByQuery(customerName, pageable);
     }
 }

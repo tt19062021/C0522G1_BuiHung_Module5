@@ -1,0 +1,108 @@
+<div class="mx-5 px-5 pt-3 pb-5">
+  <h2 class="text-center fw-bold">SỬA THÔNG TIN KHÁCH HÀNG</h2>
+
+  <p class="text-center">
+    <a routerLink=""><i class="fa-solid fa-backward"></i>Quay lại trang khách hàng</a>
+  </p>
+
+  <form [formGroup]="customerForm" (ngSubmit)="editObject()">
+    <table>
+      <tr>
+        <td>Mã Số Sổ</td>
+        <select formControlName="bankPassBook" [compareWith]="compareWithId" disabled>
+          <option  [ngValue]="temp" *ngFor="let temp of bankList" >{{temp.id}}</option>
+        </select>
+      </tr>
+      <tr>
+        <td>Mã Khách Hàng :</td>
+        <td><input type="number" formControlName="id" disabled></td>
+      </tr>
+      <tr>
+        <td>Tên Khách Hàng:</td>
+        <td><input type="text" formControlName="name">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.name.hasError('required') &&
+                      customerForm.controls.name.touched">
+            Không được để trống !
+          </div>
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.name.hasError('pattern') &&
+                      customerForm.controls.name.touched">
+            Tên không chứa số !
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Ngày Mở:</td>
+        <td><input type="date" formControlName="startDay">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.startDay.hasError('required') &&
+                      customerForm.controls.startDay.touched">
+            Không được để trống !
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Thời gian gửi:</td>
+        <td><input type="date" formControlName="sentDay">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.sentDay.hasError('required') &&
+                      customerForm.controls.sentDay.touched">
+            Không được để trống !
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Kỳ Hạn</td>
+        <select formControlName="period" >
+          <option value= 3>3 tháng</option>
+          <option value= 6>6 tháng</option>
+          <option value= 12>12 tháng</option>
+          <option value= 60>5 năm</option>
+          <option value= 1000>vô thời hạn</option>
+        </select>
+      </tr>
+      <tr>
+        <td>Số tiền gửi:</td>
+        <td><input type="number" formControlName="money">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.money.hasError('required') &&
+                      customerForm.controls.money.touched">
+            Không được để trống !
+          </div>
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.money.hasError('min') &&
+                      customerForm.controls.money.touched">
+            Số tiền gửi > 10.000.000 VND !
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Lãi suất:(%/năm)</td>
+        <td><input type="number" formControlName="interestRate">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.interestRate.hasError('required') &&
+                      customerForm.controls.interestRate.touched">
+            Không được để trống !
+          </div>
+      </tr>
+
+      <tr>
+        <td>Ưu đải:</td>
+        <td><input type="text" formControlName="endow">
+          <div class="alert alert-danger" role="alert"
+               *ngIf="customerForm.controls.endow.hasError('required') &&
+                      customerForm.controls.endow.touched">
+            Không được để trống !
+          </div>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button>Sửa</button></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+

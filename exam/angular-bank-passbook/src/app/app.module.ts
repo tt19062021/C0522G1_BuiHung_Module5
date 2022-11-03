@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { BankPassBookListComponent } from './pass-book/bank-pass-book-list/bank-pass-book-list.component';
+import {NgbModule, NgbPagination} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BankPassBookListComponent } from './pass-book/bank-pass-book-list/bank-
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

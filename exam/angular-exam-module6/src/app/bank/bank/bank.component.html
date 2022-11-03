@@ -1,0 +1,86 @@
+<div class="p-3 px-5">
+  <h1 style="text-align: center">Danh Sách Khách Hàng</h1>
+  <button routerLink="/create" class="btn btn-info">Tạo mới khách hàng</button>
+  <div class="d-flex my-2" role="search">
+    <input class="form-control me-2" type="text" placeholder="Nhập tên.." aria-label="Search"
+           [(ngModel)]="customerNameSearch">
+    <!--    <input class="form-control me-2" type="text" placeholder="Nhập giá.." aria-label="Search"-->
+    <!--           [(ngModel)]="categorySearch">-->
+
+    <!--      <select class="form-control me-2" [(ngModel)]="categorySearch" [compareWith]="compareWithId">-->
+    <!--        <option value="{{categorySearch}}" disabled>Danh mục..</option>-->
+    <!--        <option *ngFor="let item of categoryList" [ngValue]="item">{{item.name}}</option>-->
+    <!--      </select>-->
+<!--    <button class="btn btn-light btn-outline-warning me-2" (click)="resetSearchInput()">-->
+<!--      <i class="fa-solid fa-xmark"></i></button>-->
+    <button class="btn btn-light btn-outline-primary" (click) = "paginate()">
+      <i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Mã Số Sổ TK</th>
+      <th>Mã Khách Hàng</th>
+      <th>Tên Khách Hàng</th>
+      <th>Ngày Mở</th>
+      <th>Thời Gian Gửi</th>
+      <th>Kỳ Hạn</th>
+      <th>Số Tiền Gửi(VNĐ)</th>
+      <th>Lãi Suất</th>
+      <th>Ưu Đãi</th>
+      <th colspan="1"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cbp of (customerList$ | async)">
+      <td>{{cbp.bank.id}}</td>
+      <td>{{cbp.id}}</td>
+      <td>
+        <a routerLink="/edit/{{cbp.id}}">{{cbp.name}}</a>
+      </td>
+      <td>{{cbp.startDay}}</td>
+      <td>{{cbp.sentDay}}</td>
+      <td>{{cbp.period}} tháng</td>
+      <td>{{cbp.money | currency: ''}}</td>
+      <td>{{cbp.interestRate}} %/năm</td>
+      <td>{{cbp.endow}}</td>
+      <td>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#deleleBank"
+                (click)="sendId(cbp)">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade" id="deleleBank" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Bạn có muốn xóa ?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="h6">Mã khách hàng :</span><strong class="text-danger ps-2">{{idDelete}}</strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="delete()" data-bs-dismiss="modal">Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between p-2" style="margin-left: 42%">
+    <ngb-pagination
+      [collectionSize]="(total$ | async)!"
+      [(page)]="page"
+      [maxSize]="5"
+      [pageSize]="pageSize"
+      (pageChange)="paginate()"
+    >
+    </ngb-pagination>
+  </div>
+</div>

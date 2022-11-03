@@ -8,23 +8,22 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-@CrossOrigin()
+
+
 @RestController
 @RequestMapping("/api/customer")
+@CrossOrigin()
 public class RestCustomerController {
 
     @Autowired
     private ICustomerPassBookService iCustomerPassBookService;
 
     @GetMapping
-    public ResponseEntity<Page<Customer>> findAllCustomer(@PageableDefault Pageable pageable) {
-        Page<Customer> customerList = iCustomerPassBookService.findAll(pageable);
+    public ResponseEntity<Page<Customer>> findAllCustomer(@RequestParam(value = "customerName", defaultValue = "") String nameSearch
+            ,@PageableDefault Pageable pageable) {
+        Page<Customer> customerList = iCustomerPassBookService.findAll(nameSearch, pageable);
         if (customerList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {

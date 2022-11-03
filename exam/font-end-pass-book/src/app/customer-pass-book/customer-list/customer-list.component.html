@@ -1,0 +1,84 @@
+<form>
+  <!--  <div class="mb-3 row">-->
+  <!--    <label class="col-xs-3 col-sm-auto col-form-label">Birthday From:</label>-->
+  <!--    <div class="col-xs-3 col-sm-auto">-->
+  <!--      <div class="input-group">-->
+  <!--        <input-->
+  <!--          class="form-control"-->
+  <!--          placeholder="yyyy-mm-dd"-->
+  <!--          name="dFrom"-->
+  <!--          [(ngModel)]="birthdayFrom"-->
+  <!--          ngbDatepicker-->
+  <!--          (dateSelect)="search()"-->
+  <!--          #dFrom="ngbDatepicker"-->
+  <!--        />-->
+  <!--        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dFrom.toggle()" type="button"></button>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <label class="col-xs-3 col-sm-auto col-form-label">To:</label>-->
+  <!--    <div class="col-xs-3 col-sm-auto">-->
+  <!--      <div class="input-group">-->
+  <!--        <input-->
+  <!--          class="form-control"-->
+  <!--          placeholder="yyyy-mm-dd"-->
+  <!--          name="dTo"-->
+  <!--          [(ngModel)]="birthdayTo"-->
+  <!--          (dateSelect)="search()"-->
+  <!--          ngbDatepicker-->
+  <!--          #dTo="ngbDatepicker"-->
+  <!--        />-->
+  <!--        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dTo.toggle()" type="button"></button>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+</form>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Mã Số Sổ TK</th>
+    <th>Mã Khách Hàng</th>
+    <th>Tên Khách Hàng</th>
+    <th>Ngày Mở</th>
+    <th>Thời Gian Gửi</th>
+    <th>Kỳ Hạn</th>
+    <th>Số Tiền Gửi(VNĐ)</th>
+    <th>Lãi Suất</th>
+    <th>Ưu Đãi</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor= "let cbp of (customerList$ | async)">
+    <td>{{cbp.bankPassBook.name}}</td>
+    <td>0{{cbp.id}}</td>
+    <td>
+      <a routerLink="/edit/{{cbp.id}}" href="#">{{cbp.name}}</a>
+    </td>
+    <td>{{cbp.startDay}}</td>
+    <td>{{cbp.sentDay}}</td>
+    <td>{{cbp.period}} tháng</td>
+    <td>{{cbp.money | currency: ''}}</td>
+    <td>{{cbp.interestRate}} %/năm</td>
+    <td>{{cbp.endow}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination
+    [collectionSize]="(total$ | async)!"
+    [(page)]="page"
+    [maxSize]="5"
+    [pageSize]="pageSize"
+    (pageChange)="paginate()"
+  >
+  </ngb-pagination>
+
+  <select class="form-select" style="width: auto" [(ngModule)]= 'pageSize' (ngModelChange)="paginate()">
+    <option [ngValue] ="2">2 items per page</option>
+    <option [ngValue] ="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+    <option [ngValue]="50">50 items per page</option>
+  </select>
+</div>
+

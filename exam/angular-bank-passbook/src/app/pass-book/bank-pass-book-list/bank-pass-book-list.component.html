@@ -1,54 +1,65 @@
 <form>
-  <div class="mb-3 row">
-    <label class="col-xs-3 col-sm-auto col-form-label">Birthday From:</label>
-    <div class="col-xs-3 col-sm-auto">
-      <div class="input-group">
-        <input
-          class="form-control"
-          placeholder="yyyy-mm-dd"
-          name="dFrom"
-          [(ngModel)]="birthdayFrom"
-          ngbDatepicker
-          (dateSelect)="search()"
-          #dFrom="ngbDatepicker"
-        />
-        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dFrom.toggle()" type="button"></button>
-      </div>
-    </div>
-    <label class="col-xs-3 col-sm-auto col-form-label">To:</label>
-    <div class="col-xs-3 col-sm-auto">
-      <div class="input-group">
-        <input
-          class="form-control"
-          placeholder="yyyy-mm-dd"
-          name="dTo"
-          [(ngModel)]="birthdayTo"
-          (dateSelect)="search()"
-          ngbDatepicker
-          #dTo="ngbDatepicker"
-        />
-        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dTo.toggle()" type="button"></button>
-      </div>
-    </div>
-  </div>
+<!--  <div class="mb-3 row">-->
+<!--    <label class="col-xs-3 col-sm-auto col-form-label">Birthday From:</label>-->
+<!--    <div class="col-xs-3 col-sm-auto">-->
+<!--      <div class="input-group">-->
+<!--        <input-->
+<!--          class="form-control"-->
+<!--          placeholder="yyyy-mm-dd"-->
+<!--          name="dFrom"-->
+<!--          [(ngModel)]="birthdayFrom"-->
+<!--          ngbDatepicker-->
+<!--          (dateSelect)="search()"-->
+<!--          #dFrom="ngbDatepicker"-->
+<!--        />-->
+<!--        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dFrom.toggle()" type="button"></button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <label class="col-xs-3 col-sm-auto col-form-label">To:</label>-->
+<!--    <div class="col-xs-3 col-sm-auto">-->
+<!--      <div class="input-group">-->
+<!--        <input-->
+<!--          class="form-control"-->
+<!--          placeholder="yyyy-mm-dd"-->
+<!--          name="dTo"-->
+<!--          [(ngModel)]="birthdayTo"-->
+<!--          (dateSelect)="search()"-->
+<!--          ngbDatepicker-->
+<!--          #dTo="ngbDatepicker"-->
+<!--        />-->
+<!--        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dTo.toggle()" type="button"></button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 </form>
 <table class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">#</th>
-    <th scope="col">Name</th>
-    <th scope="col">Birthday</th>
-    <th scope="col">Gender</th>
-    <th scope="col">ClassName</th>
+    <th>Mã Số Sổ TK</th>
+    <th>Mã Khách Hàng</th>
+    <th>Tên Khách Hàng</th>
+    <th>Ngày Mở</th>
+    <th>Thời Gian Gửi</th>
+    <th>Kỳ Hạn</th>
+    <th>Số Tiền Gửi(VNĐ)</th>
+    <th>Lãi Suất</th>
+    <th>Ưu Đãi</th>
+    <th colspan="2"></th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let student of (studentList$ | async)">
-    <th>{{ student.id }}</th>
-    <td>{{ student.name }}</td>
-    <td>{{ student.birthday}}</td>
-    <td>{{ student.gender}}</td>
-    <td>{{ student.studentClass.name}}</td>
+  <tr *ngFor="let cbp of (customerList$ | async)">
+    <td>{{cbp.bankPassBook.name}}</td>
+    <td>0{{cbp.id}}</td>
+    <td>
+      <a routerLink="/edit/{{cbp.id}}" href="#">{{cbp.name}}</a>
+    </td>
+    <td>{{cbp.startDay}}</td>
+    <td>{{cbp.sentDay}}</td>
+    <td>{{cbp.period}} tháng</td>
+    <td>{{cbp.money | currency: ''}}</td>
+    <td>{{cbp.interestRate}} %/năm</td>
+    <td>{{cbp.endow}}</td>
   </tr>
   </tbody>
 </table>

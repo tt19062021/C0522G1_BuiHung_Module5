@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {BankPassBookService} from '../bank-pass-book.service';
 import {CustomerPassBook} from '../customer-pass-book';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
-
 
 @Component({
   selector: 'app-bank-pass-book-list',
@@ -15,8 +13,8 @@ export class BankPassBookListComponent implements OnInit {
   pageSize = 4;
   customerList$: Observable<CustomerPassBook[]>;
   total$: Observable<number>;
-  birthdayFrom: NgbDateStruct;
-  birthdayTo: NgbDateStruct;
+  // birthdayFrom: NgbDateStruct;
+  // birthdayTo: NgbDateStruct;
   constructor(private bankPassBookService: BankPassBookService) {
   }
 
@@ -32,9 +30,9 @@ export class BankPassBookListComponent implements OnInit {
     });
   }
 
-  search() {
-    console.log(this.birthdayFrom);
-    console.log(this.birthdayTo);
-  }
+  // search() {
+  //   console.log(this.birthdayFrom);
+  //   console.log(this.birthdayTo);
+  // }
 
 }
