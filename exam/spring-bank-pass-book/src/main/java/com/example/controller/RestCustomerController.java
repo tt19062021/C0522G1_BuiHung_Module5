@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
 
 
 @RestController
@@ -29,5 +30,20 @@ public class RestCustomerController {
         } else {
             return new ResponseEntity<>(customerList, HttpStatus.OK);
         }
+    }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Customer> deleteCustomer(@PathVariable int id) {
+        Optional<Customer> customer = iCustomerPassBookService.findById(id);
+        if (customer.isPresent()) {
+            iCustomerPassBookService.remove(id);
+        }
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @PatchMapping ("/edit/{id}")
+    public ResponseEntity<Customer> saveEditing(@RequestBody Customer customer,
+                                                @PathVariable int id) {
+        Customer customer1 = iCustomerPassBookService.findById(id).get();
+        iCustomerPassBookService.update(customer1);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
