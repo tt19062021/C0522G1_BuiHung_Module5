@@ -1,10 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {ProductService} from '../../service/product.service';
-import {CategoryService} from '../../service/category.service';
-import {Category} from '../../model/category';
-import {ActivatedRoute} from '@angular/router';
-import {Product} from '../../model/product';
+import {ProductService} from '../product.service';
+import {CategoryService} from '../../category/category.service';
+import {Category} from '../../category/category';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Product} from '../product';
+import html2canvas from 'html2canvas';
+import {jsPDF} from 'jspdf';
 
 @Component({
   selector: 'app-product-edit',
@@ -15,11 +17,12 @@ export class ProductEditComponent implements OnInit {
   productForm: FormGroup;
   categorys: Category[];
   product: Product;
-
+  @ViewChild('content', {static: true}) el!: ElementRef<HTMLImageElement>;
 
   constructor(private productService: ProductService,
               private categoryService: CategoryService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -40,13 +43,37 @@ export class ProductEditComponent implements OnInit {
       this.categorys = value;
     });
   }
+
   editProduct() {
     this.product = this.productForm.value;
-    this.productService.editProduct(this.product).subscribe(value => {}, error => {},
-      () => console.log('Dã sửa xong!!'));
+    this.productService.editProduct(this.product).subscribe(value => {
+      // @ts-ignore
+      Swal.fire({
+        position: 'center',
+        icon: 'info',
+        title: 'Sửa thành công',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      this.router.navigateByUrl('product/list');
+    });
   }
 
   compareWithId(item1, item2) {
     return item1 && item2 && item1.id === item2.id;
+  }
+
+  exportPdf() {
+    html2canvas(this.el.nativeElement).then(canvas => {
+      const imgData = canvas.toDataURL('image/jpeg');
+      const pdf = new jsPDF({
+        orientation: 'portrait'
+      });
+      const imageProps = pdf.getImageProperties(imgData);
+      const pdfw = pdf.internal.pageSize.getWidth();
+      const pdfh = (imageProps.height * pdfw) / imageProps.width;
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfw, pdfh);
+      pdf.save('output.pdf');
+    });
   }
 }

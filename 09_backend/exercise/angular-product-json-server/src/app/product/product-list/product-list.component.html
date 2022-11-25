@@ -1,21 +1,91 @@
-<h1>Danh sách sản phẩm</h1>
-<a routerLink="/product/create">Tạo mới sản phẩm</a>
-<table border="1px">
-  <tr>
-    <td>STT</td>
-    <td>Tên</td>
-    <td>Giá</td>
-    <td>Mô tả</td>
-    <td>Thể loại</td>
-    <td colspan="2"></td>
-  </tr>
-  <tr *ngFor="let product of products; index as i">
-    <td>{{i + 1}}</td>
-    <td>{{product.name}}</td>
-    <td>{{product.price}}</td>
-    <td>{{product.description}}</td>
-    <td>{{product.category.name}}</td>
-    <td><a routerLink="/product/edit/{{product.id}}">Edit</a></td>
-    <td><a routerLink="/product/delete/{{product.id}}">Delete</a></td>
-  </tr>
-</table>
+<!--<h3 *ngIf="mess !== '' ">{{mess}}</h3>-->
+<div class="p-3 px-5">
+  <h1 style="text-align: center">Danh sách sản phẩm</h1>
+  <button routerLink="/product/create" class="btn btn-info">Tạo mới sản phẩm</button>
+  <div class="d-flex my-2" role="search">
+    <input class="form-control me-2" type="text" placeholder="Nhập tên.." aria-label="Search"
+           [(ngModel)]="nameSearch">
+    <input class="form-control me-2" type="text" placeholder="Nhập giá.." aria-label="Search"
+           [(ngModel)]="priceSearch">
+
+    <select class="form-control me-2" [(ngModel)]="categorySearch" [compareWith]="compareWithId">
+      <option value="{{categorySearch}}" >Danh mục..</option>
+      <option *ngFor="let item of categoryList" [ngValue]="item">{{item.name}}</option>
+    </select>
+
+    <button class="btn btn-light btn-outline-primary" (click)="searchByMore()">
+      <i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+  <table class="table table-success table-striped">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tên</th>
+      <th>Giá</th>
+      <th>Mô tả</th>
+      <th>Thể loại</th>
+      <th colspan="2"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of productList; index as i">
+      <td>{{i + 1 + (curPage - 1) * numberRecord}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.category.name}}</td>
+      <td>
+        <button routerLink="/product/edit/{{product.id}}" class="btn btn-info">Edit</button>
+      </td>
+      <!--   <td><a routerLink="/product/delete/{{product.id}}">Delete</a></td>-->
+      <td>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#deleleProduct"
+                (click)="getInfoProductDelete(product.name, product.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+    <div class="modal fade" id="deleleProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Bạn có muốn xóa ?</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span class="h6">Sản phẩm:</span><strong class="text-danger ps-2">{{productName}}</strong>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="deleteProduct()" data-bs-dismiss="modal">Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+
+  <nav aria-label="..." class="justify-content-center d-flex">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" (click)="previos()" *ngIf="curPage > 1">&laquo; Trang trước</a>
+      </li>
+      <li class="page-item disabled" *ngIf="curPage <= 1">
+        <a class="page-link">&laquo;</a>
+      </li>
+
+      <li class="page-item"><a class="page-link disabled" href="" [text]="curPage + ' / ' + totalPage"></a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link" (click)="next()" *ngIf="curPage < totalPage">Trang sau &raquo;</a>
+      </li>
+      <li class="page-item disabled" *ngIf="curPage >= totalPage">
+        <a class="page-link">&raquo;</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+

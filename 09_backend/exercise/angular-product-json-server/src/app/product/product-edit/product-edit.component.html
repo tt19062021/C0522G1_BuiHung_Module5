@@ -1,27 +1,41 @@
 <h1>Cập nhật thông tin sản phẩm</h1>
 <form [formGroup]="productForm" (ngSubmit)="editProduct()">
-  <table >
-    <tr>
-      <td>Tên sản phẩm:</td>
-      <td><input type="text" formControlName="name"></td>
-    </tr>
-    <tr>
-      <td>Giá sản phẩm</td>
-      <td><input type="number" formControlName="price"></td>
-    </tr>
-    <tr>
-      <td>Mô tả về sản phẩm</td>
-      <td><input type="text" formControlName="description"></td>
-    </tr>
-    <tr>
-      <td>Thể loại</td>
-      <select formControlName="category" [compareWith]="compareWithId">
-        <option [ngValue]="temp" *ngFor="let temp of categorys" >{{temp.name}}</option>
-      </select>
-    </tr>
-    <tr>
-      <td></td>
-      <td><button>Cập nhật</button></td>
-    </tr>
-  </table>
+  <div id="content" #content>
+    <h3 class="text-center">C0522G1-Cinema-Ticket</h3>
+    <h5>Lien 2: Khách Hàng</h5>
+    <h5>Mẫu số: 01/VE2/001 Ký hiệu: CP/19T</h5>
+    <h5>Số: 009439     MST: 0799752479-HungB</h5>
+    <h6 class="text-center">CONG TY TM&DV C0522G1 - DA NANG</h6>
+    <h4>------------------------------------</h4>
+    <h4>C05 Cinema Da Nang</h4>
+    <h4>------------------------------------</h4>
+    <table >
+      <tr>
+        <!--      <td>Tên sản phẩm :</td>-->
+        <td><input type="text" formControlName="name" disabled></td>
+      </tr>
+      <tr>
+        <!--      <td>Giá sản phẩm :</td>-->
+        <td><input type="number" formControlName="price" disabled></td>
+      </tr>
+      <tr>
+        <!--      <td>Mô tả về sản phẩm :</td>-->
+        <td><input type="text" formControlName="description" disabled></td>
+      </tr>
+      <tr>
+        <!--      <td>Thể loại : </td>-->
+<!--        <select formControlName="category" [compareWith]="compareWithId" disabled>-->
+<!--          <option [ngValue]="temp" *ngFor="let temp of categorys" >{{temp.name}}</option>-->
+<!--        </select>-->
+      </tr>
+<!--      <tr>-->
+<!--        <td></td>-->
+<!--      </tr>-->
+<!--    <h4>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</h4>-->
+<!--      <h5></h5>-->
+    </table>
+  </div>
+
 </form>
+<td><button>Cập nhật</button></td>
+<td><button (click)="exportPdf()">Xuat PDF</button></td>

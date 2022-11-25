@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {ProductService} from '../../service/product.service';
-import {CategoryService} from '../../service/category.service';
+import {ProductService} from '../product.service';
+import {CategoryService} from '../../category/category.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 
 
@@ -11,6 +11,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
   styleUrls: ['./product-delete.component.css']
 })
 export class ProductDeleteComponent implements OnInit {
+
   productForm: FormGroup = new FormGroup({
     name: new FormControl(),
     price: new FormControl(),

@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductService} from '../../service/product.service';
-import {FormControl, FormGroup} from '@angular/forms';
-import {CategoryService} from '../../service/category.service';
-import {Category} from '../../model/category';
-import {Product} from '../../model/product';
+import {ProductService} from '../product.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {CategoryService} from '../../category/category.service';
+import {Category} from '../../category/category';
+import {Product} from '../product';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-product-create',
@@ -15,9 +16,9 @@ export class ProductCreateComponent implements OnInit {
   productForm: FormGroup;
   categorys: Category[];
   product: Product;
-
   constructor(private productService: ProductService,
-              private categoryService: CategoryService) {
+              private categoryService: CategoryService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -26,18 +27,25 @@ export class ProductCreateComponent implements OnInit {
     }),
       this.productForm = new FormGroup({
         id: new FormControl(),
-        name: new FormControl(),
-        price: new FormControl(),
+        name: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-z0-9 ]+$')]),
+        price: new FormControl('', [Validators.required, Validators.pattern('^[1-9]\\d*$')]),
         description: new FormControl(),
         category: new FormControl(),
       });
   }
 
   submit() {
-    console.log('Nhan chưa em');
     this.product = this.productForm.value;
     this.productService.saveProduct(this.product).subscribe(value => {
-      this.productForm.reset();
+      // @ts-ignore
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Thêm mới thành công',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      this.router.navigateByUrl('product/list');
     });
   }
 }

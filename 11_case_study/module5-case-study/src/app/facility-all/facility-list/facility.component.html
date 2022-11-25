@@ -1,0 +1,52 @@
+
+<div class="customer-body">
+  <div class="container-fluid">
+    <h3 class="text-name">SERVICE</h3>
+
+
+
+    <table class="table table-striped" id="facilityTable" >
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Cost</th>
+        <th>Floors</th>
+        <th>Max</th>
+        <th>Des</th>
+        <th>Service</th>
+        <th>Pool</th>
+        <th>Type</th>
+        <th>SerTy</th>
+        <th>Rent</th>
+        <th>Image</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cus of facilityList;index as i">
+        <td>{{i+1}}</td>
+        <td>{{cus.name}}</td>
+        <td>{{cus.area}}</td>
+        <td>{{cus.cost}}</td>
+        <td>{{cus.floors}}</td>
+        <td>{{cus.maxPeople}}</td>
+        <td>{{cus.desOtherConver}}</td>
+        <td>{{cus.serviceFree}}</td>
+        <td>{{cus.poolArea}}</td>
+        <td>{{cus.standardRoom}}</td>
+        <td>{{cus.facilityType}}</td>
+        <td>{{cus.rentType}}</td>
+        <td><img class="img-size" src="{{cus.image}}"></td>
+
+        <td><a class="btn btn-primary" routerLink="update/{{cus.id}}" role="button">Update</a></td>
+        <td><a class="btn btn-danger" routerLink="delete/{{cus.id}}" role="button">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

@@ -1,0 +1,135 @@
+{
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customer": [{
+    "id": 1,
+    "customerName": "Genovera Sollowaye",
+    "customerBirthday": "8/26/1998",
+    "customerGender": true,
+    "customerIdCard": null,
+    "customerPhone": "595-912-8480",
+    "customerEmail": "gsollowaye0@unblog.fr",
+    "customerAddress": "8595 Blaine Road",
+    "customerType_id": 2,
+    "customerType_name": "Platinium"
+  }, {
+    "id": 2,
+    "customerName": "Charil Davidovici",
+    "customerBirthday": "9/28/1996",
+    "customerGender": true,
+    "customerIdCard": null,
+    "customerPhone": "642-284-7608",
+    "customerEmail": "cdavidovici1@dagondesign.com",
+    "customerAddress": "3383 Hollow Ridge Point",
+    "customerType_id": 2,
+    "customerType_name": "Platinium"
+  }, {
+    "id": 3,
+    "customerName": "Thaddeus Hanwell",
+    "customerBirthday": "2/21/1997",
+    "customerGender": false,
+    "customerIdCard": null,
+    "customerPhone": "308-574-3849",
+    "customerEmail": "thanwell2@ibm.com",
+    "customerAddress": "5 Gina Trail",
+    "customerType_id": 1,
+    "customerType_name": "Silver"
+  }, {
+    "id": 4,
+    "customerName": "Rolph Haddinton",
+    "customerBirthday": "8/27/1998",
+    "customerGender": false,
+    "customerIdCard": null,
+    "customerPhone": "369-730-5639",
+    "customerEmail": "rhaddinton3@google.pl",
+    "customerAddress": "791 Mesta Avenue",
+    "customerType_id": 1,
+    "customerType_name": "Member"
+  }, {
+    "id": 5,
+    "customerName": "Yancey Lared",
+    "customerBirthday": "11/8/1998",
+    "customerGender": false,
+    "customerIdCard": null,
+    "customerPhone": "441-270-4334",
+    "customerEmail": "ylared4@plala.or.jp",
+    "customerAddress": "36782 Columbus Trail",
+    "customerType_id": 1,
+    "customerType_name": "Member"
+  }, {
+    "id": 6,
+    "customerName": "Lorain Bompas",
+    "customerBirthday": "4/19/1998",
+    "customerGender": true,
+    "customerIdCard": null,
+    "customerPhone": "272-785-4145",
+    "customerEmail": "lbompas5@auda.org.au",
+    "customerAddress": "0460 Grayhawk Terrace",
+    "customerType_id": 3,
+    "customerType_name": "Silver"
+  }, {
+    "id": 7,
+    "customerName": "Isa Hawarden",
+    "customerBirthday": "9/5/1996",
+    "customerGender": false,
+    "customerIdCard": null,
+    "customerPhone": "733-237-5286",
+    "customerEmail": "ihawarden6@statcounter.com",
+    "customerAddress": "36 Hazelcrest Trail",
+    "customerType_id": 4,
+    "customerType_name": "Diamond"
+  }, {
+    "id": 8,
+    "customerName": "Araldo O'Scollee",
+    "customerBirthday": "8/26/1994",
+    "customerGender": true,
+    "customerIdCard": null,
+    "customerPhone": "707-185-2614",
+    "customerEmail": "aoscollee7@studiopress.com",
+    "customerAddress": "9 Carey Place",
+    "customerType_id": 3,
+    "customerType_name": "Platinum"
+  }, {
+    "id": 9,
+    "customerName": "Suzette Hearty",
+    "customerBirthday": "11/20/1998",
+    "customerGender": true,
+    "customerIdCard": null,
+    "customerPhone": "220-638-1196",
+    "customerEmail": "shearty8@reference.com",
+    "customerAddress": "0 Glendale Drive",
+    "customerType_id": 1,
+    "customerType_name": "sliver"
+  }, {
+    "id": 10,
+    "customerName": "Anitra Drinkale",
+    "customerBirthday": "10/9/1999",
+    "customerGender": false,
+    "customerIdCard": null,
+    "customerPhone": "672-376-3580",
+    "customerEmail": "adrinkale9@umn.edu",
+    "customerAddress": "337 Sheridan Circle",
+    "customerType_id": 5,
+    "customerType_name": "member"
+  }]
+}
